@@ -1,3 +1,11 @@
+# Mayfair GitHub
+> READ THIS
+> How to submit is at the bottom
+> Find your projects in the 'Issues' Tab!!
+> I will assign you to things in there and thats what you need to complete!
+> Put the labels as needed
+
+
 # Submit Example
 
 -- Client.Lua
