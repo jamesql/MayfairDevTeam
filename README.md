@@ -1,21 +1,21 @@
 # Submit Example
 
-# Client.Lua
+-- Client.Lua
 
 CODE HERE
 
 
-# Server.Lua
+-- Server.Lua
 
 CODE HERE
 
-# Misc Code with file names
+-- Misc Code with file names
 
-# Example : Config.lua
+-- Example : Config.lua
 
 CODE HERE
 
 
-# Download Links to any other files needed OR a download link to the already compiled script!
+-- Download Links to any other files needed OR a download link to the already compiled script!
 etc
-© 2018 GitHub, Inc.
+© 2018 Mayfair Gaming
