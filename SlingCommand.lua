@@ -46,6 +46,19 @@ function ShowNotification( text )
 end
 
 -- __resource.lua
+resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
+
+server_scripts {
+		"lib/varlib.lua",
+		"server/_onLoad.lua",
+		"server/_mainserver.lua",
+}
+
+client_scripts {
+		"lib/varlib.lua",
+		"client/_clientscript.lua",
+}
+
 
 
 # Download Link
