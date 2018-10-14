@@ -5,7 +5,7 @@ local gunn = nil
 RegisterCommand("sling", function(source, args)
 	local ped = GetPlayerPed(-1)
 	if GetSelectedPedWeapon(ped) == GetHashKey("weapon_specialcarbine") then
-		SetPedDropsWeapon(ped)
+		RemoveWeaponFromPed(ped, GetHashKey("weapon_specialcarbine"))
 		TggleSling = true
 		Sling()
 		ShowNotification("Slinged!")
