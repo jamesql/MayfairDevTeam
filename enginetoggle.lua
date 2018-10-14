@@ -27,4 +27,4 @@ function notify(string)
 	DrawNotification(false, false)
 end
 -- Download Link --
-https://www.sendspace.com/file/8deb0k
+# https://www.sendspace.com/file/8deb0k
