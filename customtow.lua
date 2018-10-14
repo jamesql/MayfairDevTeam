@@ -2,6 +2,7 @@
 towtruck = nil
 towingtruck = nil
 TowingCar = false
+targetVehicle = nil
 
 
 
@@ -28,13 +29,15 @@ end)
 AddEventHandler("tow:TowCar", function()
 	local ped = GetPlayerPed(-1)
   if IsPedInAnyVehicle(ped, false) then
+	targetVehicle = GetVehiclePedIsIn(ped)
 	if (towtruck == nil) then
 		TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Have Not Selected A Truck!")
 	else
 		if (GetVehiclePedIsIn(ped) == towtruck) then
 			TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Can't Tow Your Tow Truck!")
 		else
-
+				TowingCar = true
+				AttachEntityToEntity(targetVehicle, towtruck, 20, -0.5, -5.0, 1.0, 0.0, 0.0, 0.0, false, false, false, false, 20, true)
 		end
 	end
   else
@@ -46,7 +49,9 @@ AddEventHandler("tow:DropCar", function()
 	if (TowingCar == false) then
 		TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Are Not Towing Anything!")
 	else
-
+		AttachEntityToEntity(targetVehicle, towtruck, 20, -0.5, -12.0, 1.0, 0.0, 0.0, 0.0, false, false, false, false, 20, true)
+		DetachEntity(targetVehicle, true, true)
+		TowingCar = false
 	end
 end)
 
@@ -100,8 +105,5 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Server
-
--- resource
 
 # Download Link
