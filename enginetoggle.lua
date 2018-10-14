@@ -24,7 +24,7 @@ end
 function notify(string)
 	SetNotificationTextEntry("STRING")
 	AddTextComponentString(string)
-	DrawNotification(true, false)
+	DrawNotification(false, false)
 end
 -- Download Link --
 https://www.sendspace.com/file/8deb0k
