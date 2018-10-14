@@ -30,7 +30,7 @@ end)
 function Sling()
 	if (gunn == nil) then
 	gunn = CreateObject(GetHashKey("w_ar_specialcarbine"), 0, 0, 0, true, true, true)
-	AttachEntityToEntity(gunn, GetPlayerPed(-1), GetPedBoneIndex(GetPlayerPed(-1), 24818), 0.4, 0, 0, 0, 270.0, 60.0, true, true, false, true, 1, true)
+	AttachEntityToEntity(gunn, GetPlayerPed(-1), GetPedBoneIndex(GetPlayerPed(-1), 24818), -0.05, -0.13, 0, 0, 50.05, 0.55, true, true, false, true, 1, true)
 	end
 end
 
@@ -44,6 +44,7 @@ function ShowNotification( text )
     AddTextComponentString( text )
     DrawNotification( false, false )
 end
+
 -- __resource.lua
 
 
