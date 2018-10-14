@@ -1,4 +1,8 @@
 -- Client
+AddEventHandler('onClientMapStart', function()
+    TriggerServerEvent('yodaaop:sync_sv')
+end)
+
 local aop = "Sandy Shores/Harmony/Grapeseed"
 
 local cooldowntime = 0
