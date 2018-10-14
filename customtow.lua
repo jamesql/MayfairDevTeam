@@ -1,7 +1,7 @@
 -- Client.lua
-local towtruck = nil
-local towingtruck = nil
-local TowingCar = false
+towtruck = nil
+towingtruck = nil
+TowingCar = false
 
 
 
@@ -16,15 +16,30 @@ RegisterNetEvent("tow:TowCar")
 RegisterNetEvent("tow:DropCar")
 
 AddEventHandler("tow:SelectTow", function()
-
+	local ped = GetPlayerPed(-1)
+	if IsPedInAnyVehicle(ped, false) then
+		towtruck = GetVehiclePedIsIn(ped)
+		TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5Selected Vehicle!")
+	else
+		TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Need To Be In A Vehicle To Do This!")
+	end
 end)
 
 AddEventHandler("tow:TowCar", function()
+	local ped = GetPlayerPed(-1)
+  if IsPedInAnyVehicle(ped, false) then
 	if (towtruck == nil) then
 		TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Have Not Selected A Truck!")
 	else
+		if (GetVehiclePedIsIn(ped) == towtruck) then
+			TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Can't Tow Your Tow Truck!")
+		else
 
+		end
 	end
+  else
+	TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You need to be in a vehicle to do this!")
+ end
 end)
 
 AddEventHandler("tow:DropCar", function()
@@ -84,7 +99,6 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
     end
 end)
-
 
 -- Server
 
