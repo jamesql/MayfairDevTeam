@@ -20,11 +20,19 @@ AddEventHandler("tow:SelectTow", function()
 end)
 
 AddEventHandler("tow:TowCar", function()
+	if (towtruck == nil) then
+		TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Have Not Selected A Truck!")
+	else
 
+	end
 end)
 
 AddEventHandler("tow:DropCar", function()
+	if (TowingCar == false) then
+		TriggerEvent('chatMessage', '^1[[Mayfair]', {255, 255, 255}, "^5You Are Not Towing Anything!")
+	else
 
+	end
 end)
 
 
@@ -76,6 +84,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
     end
 end)
+
 
 -- Server
 
