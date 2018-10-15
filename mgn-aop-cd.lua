@@ -410,6 +410,7 @@ add_principal identifier.steam:1100001016b4aac mgn.aop.cd # Stiben
 add_principal identifier.steam:110000107bd7a60 mgn.aop.cd # Jack95Yoda
 add_principal identifier.steam:110000102cfdc10 mgn.aop.cd # Cayla Hart
 add_principal identifier.steam:1100001063a4735 mgn.aop.cd # Reiss
+add_principal identifier.steam:11000010cd46a92 mgn.aop.cd # J.Snipz
 
 -- Download link
 # https://www.sendspace.com/file/rbvdkq
