@@ -10,7 +10,7 @@ function engine()
         if IsVehicleEngineOn(GetVehiclePedIsIn(GetPlayerPed(-1), false)) then
             SetVehicleEngineOn(GetVehiclePedIsIn(GetPlayerPed(-1), false), false, false, true)
             SetVehicleUndriveable(GetVehiclePedIsIn(GetPlayerPed(-1), false), true)
-            notify("Engine off")
+            notify("~b~Engine off")
         else
             SetVehicleEngineOn(GetVehiclePedIsIn(GetPlayerPed(-1), false), true, false, true)
             SetVehicleUndriveable(GetVehiclePedIsIn(GetPlayerPed(-1), false), false)
