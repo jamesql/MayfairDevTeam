@@ -36,6 +36,6 @@ function ShowNotification( text )
     SetNotificationTextEntry( "STRING" )
     AddTextComponentString( text )
     DrawNotification( false, false )
-end
+end 
 
-# Aint not download yet bitch
+# No download yet
