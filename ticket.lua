@@ -2,7 +2,6 @@
 
 RegisterCommand("ticket", function(source, args, raw)
 local ticketedply = table.concat(args, 1)
-local myid = GetPlayerFromServerId(source)
 	if ticketedply == nil then
 		TriggerEvent('chatMessage', source, "^1MGN Ticket: ^3You need to select a player to ticket!")
 		TriggerEvent('chatMessage', source, "^1MGN Ticket: ^3Example: /ticket <id>!")
